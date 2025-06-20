@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fff8f0;
+  padding: 20px;
+}
+
+h1 {
+  color: #e76f51;
+}
+
+#scoreboard {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#game {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card-area {
+  margin: 10px;
+}
+
+.card-slot img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 160px;
+  height: 160px;
+  background-color: #fdebd0;
+  border: 2px solid #f4a261;
+  border-radius: 10px;
+  padding: 10px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.card .center-slot {
+  grid-area: 2 / 2;
+}
+
+.card button,
+.card span,
+.card img {
+  font-size: 2rem;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+#message {
+  font-size: 1.1em;
+  color: #264653;
+}
