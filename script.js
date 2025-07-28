@@ -171,14 +171,6 @@ function updateScores() {
 
 function resetGame() {
   gameStarted = false;
-  deck = shuffle([...cardIndices]);
-  centerCard = drawCard();
-  player1Card = drawCard();
-  player2Card = drawCard();
-  robotTimeoutId = null;
-  setMessage("Game reset! Click 'Start' to play again.");
-  updateScores();
-  renderAll();
   document.getElementById("start-button").disabled = false; // re-enable start button
 }
 
@@ -198,9 +190,15 @@ document.getElementById("difficulty").addEventListener("change", (e) => {
 });
 document.getElementById("start-button").addEventListener("click", () => {
   if (!gameStarted) {
+    deck = shuffle([...cardIndices]);
+    centerCard = drawCard();
+    player1Card = drawCard();
+    player2Card = drawCard();
+    robotTimeoutId = null;
     gameStarted = true;
     score1 = 0;
     score2 = 0;
+    updateScores();
     setMessage("Game started! Find the matching fruit!");
     renderAll();  // This will now schedule the robot
     document.getElementById("start-button").disabled = true; // prevent double click
