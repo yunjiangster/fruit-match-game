@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,19 +8,16 @@
   <title>Fruit Match Game</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <h1>🍓 Fruit Match Game 🍍</h1>
 
-  <div id="scoreboard">
-    <span>👧 You: <span id="score1">0</span></span>
-    <span>🤖 Robot: <span id="score2">0</span></span>
-  </div>
   <div style="text-align: center; margin-top: 10px;">
     <label for="difficulty">Robot Speed:</label>
     <select id="difficulty">
       <option value="3000">Easy</option>
       <option value="1500" selected>Normal</option>
-      <option value="500">Hard</option>
+      <option value="100">Hard</option>
     </select>
   </div>
 
@@ -38,7 +36,11 @@
     <p>🏁 When you're ready, press <strong>"Start Game"</strong> to begin!</p>
   </div>
   <div style="text-align: center; margin-top: 20px;">
-  <button id="start-button">▶️ Start Game</button>
+    <button id="start-button">▶️ Start Game</button>
+  </div>
+  <div id="scoreboard">
+    <span>👧 You: <span id="score1">0</span></span>
+    <span>🤖 Robot: <span id="score2">0</span></span>
   </div>
   <div id="game">
 
@@ -46,13 +48,13 @@
       <h2>Your Card</h2>
       <div id="player1-card" class="card"></div>
     </div>
-    
+
     <div class="card-area">
       <h2>Center Card</h2>
       <div id="center-card" class="card"></div>
     </div>
 
-    
+
     <div class="card-area">
       <h2>Robot Card</h2>
       <div id="player2-card" class="card"></div>
@@ -63,5 +65,5 @@
 
   <script src="script.js" type="module"></script>
 </body>
-</html>
 
+</html>
